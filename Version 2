@@ -1,0 +1,27 @@
+import datetime
+
+event_title = input("Enter event title: ")
+year_input = input("Enter year: ")
+month_input = input("Enter month: ")
+day_input = input("Enter day: ")
+
+year = int(year_input)
+month = int(month_input)
+day = int(day_input)
+
+event_date = datetime.date(year, month, day)
+
+months_list = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+weekdays_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+month_name = months_list[month - 1]
+weekday_number = event_date.weekday()
+weekday_name = weekdays_list[weekday_number]
+
+print("Formatted Output:")
+print("Event:", event_title.upper())
+print("Date:", month_name + " " + str(day) + ", " + str(year))
+print("Year:", year)
+print("Month:", month_name)
+print("Day:", day)
+print("Weekday:", weekday_name)
